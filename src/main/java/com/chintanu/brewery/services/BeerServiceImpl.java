@@ -17,4 +17,21 @@ public class BeerServiceImpl implements BeerService {
                 .upc(3L)
                 .build();
     }
+
+    @Override
+    public BeerVO saveNewBeer(BeerVO beerVO) {
+        return BeerVO.builder()
+                .id(UUID.randomUUID())
+                .build();
+    }
+
+    @Override
+    public void updateBeer(UUID beerId, BeerVO beerVO) {
+        System.out.println("Beer Updated, Stub to be filled later.");
+    }
+
+    @Override
+    public void deleteBeer(UUID beerId) {
+        System.out.println("Beer Deleted, Stub to be filled later.");
+    }
 }
